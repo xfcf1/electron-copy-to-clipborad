@@ -12,7 +12,7 @@ const macUrl = clipboard.read('public.file-url')
 
 // windows os
 let windowsUrl = clipboard.read('FileNameW')
-windowsUrl = encodeURIComponent(windowsUrl.replace(new RegExp(String.fromCharCode(0), 'g'), '')))
+windowsUrl = windowsUrl.replace(new RegExp(String.fromCharCode(0), 'g'), ''))
 ```
 
 # reference
