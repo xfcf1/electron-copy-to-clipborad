@@ -4,6 +4,17 @@ copy file's path to clipborad for paste, see the index.js
 
 tips: windows OS you need `exe/file2clip` and [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 
+read path
+
+```js
+// mac os
+const macUrl = clipboard.read('public.file-url')
+
+// windows os
+let windowsUrl = clipboard.read('FileNameW')
+windowsUrl = encodeURIComponent(windowsUrl.replace(new RegExp(String.fromCharCode(0), 'g'), '')))
+```
+
 # reference
 
 - [https://github.com/electron/electron/issues/9035#issuecomment-359161275](https://github.com/electron/electron/issues/9035#issuecomment-359161275)
