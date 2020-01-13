@@ -11,8 +11,7 @@ read path
 const macUrl = clipboard.read('public.file-url')
 
 // windows os
-let windowsUrl = clipboard.read('FileNameW')
-windowsUrl = windowsUrl.replace(new RegExp(String.fromCharCode(0), 'g'), ''))
+const windowsUrl = clipboard.readBuffer('FileNameW').toString('ucs2')
 ```
 
 # reference
